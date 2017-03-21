@@ -1,4 +1,4 @@
-package alessandro.firebaseandroid;
+package com.igniva.firebaseandroid;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -41,15 +41,15 @@ import java.io.File;
 import java.util.Calendar;
 import java.util.Date;
 
-import alessandro.firebaseandroid.adapter.ChatFirebaseAdapter;
-import alessandro.firebaseandroid.adapter.ClickListenerChatFirebase;
-import alessandro.firebaseandroid.model.ChatModel;
-import alessandro.firebaseandroid.model.FileModel;
-import alessandro.firebaseandroid.model.MapModel;
-import alessandro.firebaseandroid.model.UserModel;
-import alessandro.firebaseandroid.util.Util;
-import alessandro.firebaseandroid.view.FullScreenImageActivity;
-import alessandro.firebaseandroid.view.LoginActivity;
+import com.igniva.firebaseandroid.adapter.ChatFirebaseAdapter;
+import com.igniva.firebaseandroid.adapter.ClickListenerChatFirebase;
+import com.igniva.firebaseandroid.model.ChatModel;
+import com.igniva.firebaseandroid.model.FileModel;
+import com.igniva.firebaseandroid.model.MapModel;
+import com.igniva.firebaseandroid.model.UserModel;
+import com.igniva.firebaseandroid.util.Util;
+import com.igniva.firebaseandroid.view.FullScreenImageActivity;
+import com.igniva.firebaseandroid.view.LoginActivity;
 import hani.momanii.supernova_emoji_library.Actions.EmojIconActions;
 import hani.momanii.supernova_emoji_library.Helper.EmojiconEditText;
 

@@ -1,4 +1,4 @@
-package alessandro.firebaseandroid.util;
+package com.igniva.firebaseandroid.util;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
@@ -10,6 +10,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
+ *
  * Created by Alessandro Barreto on 23/06/2016.
  */
 public class Util {

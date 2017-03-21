@@ -1,11 +1,12 @@
-package alessandro.firebaseandroid.view;
+package com.igniva.firebaseandroid.view;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -20,10 +21,9 @@ import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GoogleAuthProvider;
-
-import alessandro.firebaseandroid.MainActivity;
-import alessandro.firebaseandroid.R;
-import alessandro.firebaseandroid.util.Util;
+import com.igniva.firebaseandroid.MainActivity;
+import com.igniva.firebaseandroid.R;
+import com.igniva.firebaseandroid.util.Util;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener {
 
@@ -43,8 +43,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        if (!Util.verificaConexao(this)){
-            Util.initToast(this,"Você não tem conexão com internet");
+        if (!Util.verificaConexao(this)) {
+            Util.initToast(this, "Você não tem conexão com internet");
             finish();
         }
 
@@ -56,7 +56,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 .requestEmail()
                 .build();
         mGoogleApiClient = new GoogleApiClient.Builder(this)
-                .enableAutoManage(this,this)
+                .enableAutoManage(this, this)
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
 
@@ -75,6 +75,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 firebaseAuthWithGoogle(account);
             } else {
                 Log.e(TAG, "Google Sign In failed.");
+                Toast.makeText(LoginActivity.this, "Google Sign In failed.", Toast.LENGTH_SHORT).show();
+
             }
         }
     }
@@ -93,7 +95,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
         Log.d(TAG, "onConnectionFailed:" + connectionResult);
-        Util.initToast(this,"Google Play Services error.");
+        Util.initToast(this, "Google Play Services error.");
     }
 
     private void signIn() {
@@ -111,7 +113,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         Log.d(TAG, "signInWithCredential:onComplete:" + task.isSuccessful());
                         if (!task.isSuccessful()) {
                             Log.w(TAG, "signInWithCredential", task.getException());
-                            Util.initToast(LoginActivity.this,"Authentication failed");
+                            Util.initToast(LoginActivity.this, "Authentication failed");
                         } else {
                             startActivity(new Intent(LoginActivity.this, MainActivity.class));
                             finish();

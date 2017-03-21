@@ -1,4 +1,4 @@
-package alessandro.firebaseandroid.view;
+package com.igniva.firebaseandroid.view;
 
 /*
  * TouchImageView.java

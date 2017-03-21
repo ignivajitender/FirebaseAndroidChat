@@ -1,4 +1,4 @@
-package alessandro.firebaseandroid;
+package com.igniva.firebaseandroid;
 
 import org.junit.Test;
 

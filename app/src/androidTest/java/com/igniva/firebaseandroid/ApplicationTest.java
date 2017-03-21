@@ -1,4 +1,4 @@
-package alessandro.firebaseandroid;
+package com.igniva.firebaseandroid;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

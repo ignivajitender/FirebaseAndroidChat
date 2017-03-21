@@ -1,4 +1,4 @@
-package alessandro.firebaseandroid.adapter;
+package com.igniva.firebaseandroid.adapter;
 
 import android.view.View;
 

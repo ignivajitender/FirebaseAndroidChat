@@ -1,4 +1,4 @@
-package alessandro.firebaseandroid.view;
+package com.igniva.firebaseandroid.view;
 
 import android.app.ProgressDialog;
 import android.graphics.Bitmap;
@@ -19,8 +19,8 @@ import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.target.SizeReadyCallback;
 import com.bumptech.glide.request.target.Target;
 
-import alessandro.firebaseandroid.R;
-import alessandro.firebaseandroid.adapter.CircleTransform;
+import com.igniva.firebaseandroid.R;
+import com.igniva.firebaseandroid.adapter.CircleTransform;
 
 public class FullScreenImageActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package alessandro.firebaseandroid.adapter;
+package com.igniva.firebaseandroid.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.text.format.DateUtils;
@@ -15,8 +15,8 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Query;
 
-import alessandro.firebaseandroid.R;
-import alessandro.firebaseandroid.model.ChatModel;
+import com.igniva.firebaseandroid.R;
+import com.igniva.firebaseandroid.model.ChatModel;
 import hani.momanii.supernova_emoji_library.Helper.EmojiconTextView;
 
 /**
@@ -35,7 +35,7 @@ public class ChatFirebaseAdapter extends FirebaseRecyclerAdapter<ChatModel,ChatF
 
 
 
-    public ChatFirebaseAdapter(DatabaseReference ref, String nameUser,ClickListenerChatFirebase mClickListenerChatFirebase) {
+    public ChatFirebaseAdapter(DatabaseReference ref, String nameUser, com.igniva.firebaseandroid.adapter.ClickListenerChatFirebase mClickListenerChatFirebase) {
         super(ChatModel.class, R.layout.item_message_left, ChatFirebaseAdapter.MyChatViewHolder.class, ref);
         this.nameUser = nameUser;
         this.mClickListenerChatFirebase = mClickListenerChatFirebase;
@@ -91,7 +91,7 @@ public class ChatFirebaseAdapter extends FirebaseRecyclerAdapter<ChatModel,ChatF
             viewHolder.tvIsLocation(View.GONE);
             viewHolder.setIvChatPhoto(model.getFile().getUrl_file());
         }else if(model.getMapModel() != null){
-            viewHolder.setIvChatPhoto(alessandro.firebaseandroid.util.Util.local(model.getMapModel().getLatitude(),model.getMapModel().getLongitude()));
+            viewHolder.setIvChatPhoto(com.igniva.firebaseandroid.util.Util.local(model.getMapModel().getLatitude(),model.getMapModel().getLongitude()));
             viewHolder.tvIsLocation(View.VISIBLE);
         }
     }

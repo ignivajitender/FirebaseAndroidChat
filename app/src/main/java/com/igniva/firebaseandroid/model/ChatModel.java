@@ -1,4 +1,4 @@
-package alessandro.firebaseandroid.model;
+package com.igniva.firebaseandroid.model;
 
 
 /**

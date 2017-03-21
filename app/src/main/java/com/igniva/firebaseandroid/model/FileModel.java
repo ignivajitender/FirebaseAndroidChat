@@ -1,4 +1,4 @@
-package alessandro.firebaseandroid.model;
+package com.igniva.firebaseandroid.model;
 
 /**
  * Created by Alessandro Barreto on 22/06/2016.
